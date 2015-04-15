@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:form="http://g5.1c.ru/v8/dt/form">
+  <items xsi:type="form:Table" name="ТратыЗаТекущийМесяц" id="1" representation="List" autoInsertNewRow="true" enableStartDrag="true" enableDrag="true" searchStringLocation="None" viewStatusLocation="None" searchControlLocation="None">
+    <userVisible common="true"/>
+    <dataPath xsi:type="form:DataPath">
+      <segments>Объект</segments>
+      <segments>ТратыЗаТекущийМесяц</segments>
+    </dataPath>
+    <items xsi:type="form:FormField" name="ТратыЗаТекущийМесяцНомерСтроки" id="5" type="LabelField">
+      <userVisible common="true"/>
+      <dataPath xsi:type="form:DataPath">
+        <segments>Объект</segments>
+        <segments>ТратыЗаТекущийМесяц</segments>
+        <segments>LineNumber</segments>
+      </dataPath>
+      <extInfo xsi:type="form:LabelFieldExtInfo"/>
+      <contextMenu name="ТратыЗаТекущийМесяцНомерСтрокиКонтекстноеМеню" id="6">
+        <userVisible common="true"/>
+      </contextMenu>
+      <extendedTooltip name="ТратыЗаТекущийМесяцНомерСтрокиРасширеннаяПодсказка" id="7">
+        <userVisible common="true"/>
+        <extInfo xsi:type="form:LabelDecorationExtInfo"/>
+      </extendedTooltip>
+    </items>
+    <items xsi:type="form:FormField" name="ТратыЗаТекущийМесяцСтатьяРасходов" id="8">
+      <userVisible common="true"/>
+      <dataPath xsi:type="form:DataPath">
+        <segments>Объект</segments>
+        <segments>ТратыЗаТекущийМесяц</segments>
+        <segments>СтатьяРасходов</segments>
+      </dataPath>
+      <extInfo xsi:type="form:InputFieldExtInfo"/>
+      <contextMenu name="ТратыЗаТекущийМесяцСтатьяРасходовКонтекстноеМеню" id="9">
+        <userVisible common="true"/>
+      </contextMenu>
+      <extendedTooltip name="ТратыЗаТекущийМесяцСтатьяРасходовРасширеннаяПодсказка" id="10">
+        <userVisible common="true"/>
+        <extInfo xsi:type="form:LabelDecorationExtInfo"/>
+      </extendedTooltip>
+    </items>
+    <items xsi:type="form:FormField" name="ТратыЗаТекущийМесяцСумма" id="11" readOnly="true" horizontalAlign="Left">
+      <userVisible common="true"/>
+      <dataPath xsi:type="form:DataPath">
+        <segments>Объект</segments>
+        <segments>ТратыЗаТекущийМесяц</segments>
+        <segments>Сумма</segments>
+      </dataPath>
+      <extInfo xsi:type="form:InputFieldExtInfo"/>
+      <contextMenu name="ТратыЗаТекущийМесяцСуммаКонтекстноеМеню" id="12">
+        <userVisible common="true"/>
+      </contextMenu>
+      <extendedTooltip name="ТратыЗаТекущийМесяцСуммаРасширеннаяПодсказка" id="13">
+        <userVisible common="true"/>
+        <extInfo xsi:type="form:LabelDecorationExtInfo"/>
+      </extendedTooltip>
+    </items>
+    <autoCommandBar name="ТратыЗаТекущийМесяцКоманднаяПанель" id="3" autoFill="false">
+      <userVisible common="true"/>
+    </autoCommandBar>
+    <searchStringAddition name="ТратыЗаТекущийМесяцSearchString" id="14" source="ТратыЗаТекущийМесяцSearchString">
+      <userVisible common="true"/>
+      <extInfo xsi:type="form:SearchStringAdditionExtInfo"/>
+      <contextMenu name="ТратыЗаТекущийМесяцSearchStringContextMenu" id="15">
+        <userVisible common="true"/>
+      </contextMenu>
+      <extendedTooltip name="ТратыЗаТекущийМесяцSearchStringExtendedTooltip" id="16">
+        <userVisible common="true"/>
+        <extInfo xsi:type="form:LabelDecorationExtInfo"/>
+      </extendedTooltip>
+    </searchStringAddition>
+    <viewStatusAddition name="ТратыЗаТекущийМесяцViewStatus" id="17" type="ViewStatusAddition" source="ТратыЗаТекущийМесяцViewStatus">
+      <userVisible common="true"/>
+      <extInfo xsi:type="form:ViewStatusAdditionExtInfo"/>
+      <contextMenu name="ТратыЗаТекущийМесяцViewStatusContextMenu" id="18">
+        <userVisible common="true"/>
+      </contextMenu>
+      <extendedTooltip name="ТратыЗаТекущийМесяцViewStatusExtendedTooltip" id="19">
+        <userVisible common="true"/>
+        <extInfo xsi:type="form:LabelDecorationExtInfo"/>
+      </extendedTooltip>
+    </viewStatusAddition>
+    <searchControlAddition name="ТратыЗаТекущийМесяцSearchControl" id="20" type="SearchControlAddition" source="ТратыЗаТекущийМесяцSearchControl">
+      <userVisible common="true"/>
+      <extInfo xsi:type="form:SearchControlAdditionExtInfo"/>
+      <contextMenu name="ТратыЗаТекущийМесяцSearchControlContextMenu" id="21">
+        <userVisible common="true"/>
+      </contextMenu>
+      <extendedTooltip name="ТратыЗаТекущийМесяцSearchControlExtendedTooltip" id="22">
+        <userVisible common="true"/>
+        <extInfo xsi:type="form:LabelDecorationExtInfo"/>
+      </extendedTooltip>
+    </searchControlAddition>
+    <contextMenu name="ТратыЗаТекущийМесяцКонтекстноеМеню" id="2">
+      <userVisible common="true"/>
+    </contextMenu>
+    <extendedTooltip name="ТратыЗаТекущийМесяцРасширеннаяПодсказка" id="4">
+      <userVisible common="true"/>
+      <extInfo xsi:type="form:LabelDecorationExtInfo"/>
+    </extendedTooltip>
+  </items>
+  <autoCommandBar name="ФормаКоманднаяПанель" id="-1" autoFill="false">
+    <userVisible common="true"/>
+  </autoCommandBar>
+  <events key="OnCreateAtServer" value="ПриСозданииНаСервере"/>
+  <attributes name="Объект" id="1" main="true">
+    <valueType>
+      <types>DataProcessorObject.ТратыЗаТекущийМесяц</types>
+    </valueType>
+    <view common="true"/>
+    <edit common="true"/>
+  </attributes>
+  <formCommands name="Команда1" id="1">
+    <use common="true"/>
+  </formCommands>
+  <commandInterface>
+    <navigationPanel/>
+    <commandBar/>
+  </commandInterface>
+</form:Form>

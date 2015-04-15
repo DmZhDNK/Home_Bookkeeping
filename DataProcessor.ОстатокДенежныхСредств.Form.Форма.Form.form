@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:form="http://g5.1c.ru/v8/dt/form">
+  <items xsi:type="form:Button" name="Обновить" id="11" commandName="Form.Command.Обновить">
+    <userVisible common="true"/>
+    <parameter/>
+    <extendedTooltip name="ОбновитьРасширеннаяПодсказка" id="12">
+      <userVisible common="true"/>
+      <extInfo xsi:type="form:LabelDecorationExtInfo"/>
+    </extendedTooltip>
+  </items>
+  <items xsi:type="form:Table" name="ОстакиДенежныхСредств" id="1" commandBarLocation="None" representation="List" readOnly="true" heightInTableRows="10" rowSelectionMode="Row" horizontalScrollBar="DontUse" verticalScrollBar="DontUse" useAlternationRowColor="true" initialListView="Beginning" searchStringLocation="None" viewStatusLocation="None" searchControlLocation="None">
+    <userVisible common="true"/>
+    <dataPath xsi:type="form:DataPath">
+      <segments>ОстакиДенежныхСредств</segments>
+    </dataPath>
+    <items xsi:type="form:FormField" name="ОстакиДенежныхСредствСчетДенежныхСредств" id="8" type="LabelField" editMode="Enter">
+      <userVisible common="true"/>
+      <dataPath xsi:type="form:DataPath">
+        <segments>ОстакиДенежныхСредств</segments>
+        <segments>СчетДенежныхСредств</segments>
+      </dataPath>
+      <extInfo xsi:type="form:LabelFieldExtInfo"/>
+      <contextMenu name="ОстакиДенежныхСредствСчетДенежныхСредствКонтекстноеМеню" id="9">
+        <userVisible common="true"/>
+      </contextMenu>
+      <extendedTooltip name="ОстакиДенежныхСредствСчетДенежныхСредствРасширеннаяПодсказка" id="10">
+        <userVisible common="true"/>
+        <extInfo xsi:type="form:LabelDecorationExtInfo"/>
+      </extendedTooltip>
+    </items>
+    <items xsi:type="form:FormField" name="ОстакиДенежныхСредствСуммаОстаток" id="5" type="LabelField" editMode="Enter">
+      <userVisible common="true"/>
+      <dataPath xsi:type="form:DataPath">
+        <segments>ОстакиДенежныхСредств</segments>
+        <segments>СуммаОстаток</segments>
+      </dataPath>
+      <extInfo xsi:type="form:LabelFieldExtInfo"/>
+      <contextMenu name="ОстакиДенежныхСредствСуммаОстатокКонтекстноеМеню" id="6">
+        <userVisible common="true"/>
+      </contextMenu>
+      <extendedTooltip name="ОстакиДенежныхСредствСуммаОстатокРасширеннаяПодсказка" id="7">
+        <userVisible common="true"/>
+        <extInfo xsi:type="form:LabelDecorationExtInfo"/>
+      </extendedTooltip>
+    </items>
+    <autoCommandBar name="ОстакиДенежныхСредствКоманднаяПанель" id="3" autoFill="false">
+      <userVisible common="true"/>
+    </autoCommandBar>
+    <searchStringAddition name="ОстакиДенежныхСредствSearchString" id="13" source="ОстакиДенежныхСредствSearchString">
+      <userVisible common="true"/>
+      <extInfo xsi:type="form:SearchStringAdditionExtInfo"/>
+      <contextMenu name="ОстакиДенежныхСредствSearchStringContextMenu" id="14">
+        <userVisible common="true"/>
+      </contextMenu>
+      <extendedTooltip name="ОстакиДенежныхСредствSearchStringExtendedTooltip" id="15">
+        <userVisible common="true"/>
+        <extInfo xsi:type="form:LabelDecorationExtInfo"/>
+      </extendedTooltip>
+    </searchStringAddition>
+    <viewStatusAddition name="ОстакиДенежныхСредствViewStatus" id="16" type="ViewStatusAddition" source="ОстакиДенежныхСредствViewStatus">
+      <userVisible common="true"/>
+      <extInfo xsi:type="form:ViewStatusAdditionExtInfo"/>
+      <contextMenu name="ОстакиДенежныхСредствViewStatusContextMenu" id="17">
+        <userVisible common="true"/>
+      </contextMenu>
+      <extendedTooltip name="ОстакиДенежныхСредствViewStatusExtendedTooltip" id="18">
+        <userVisible common="true"/>
+        <extInfo xsi:type="form:LabelDecorationExtInfo"/>
+      </extendedTooltip>
+    </viewStatusAddition>
+    <searchControlAddition name="ОстакиДенежныхСредствSearchControl" id="19" type="SearchControlAddition" source="ОстакиДенежныхСредствSearchControl">
+      <userVisible common="true"/>
+      <extInfo xsi:type="form:SearchControlAdditionExtInfo"/>
+      <contextMenu name="ОстакиДенежныхСредствSearchControlContextMenu" id="20">
+        <userVisible common="true"/>
+      </contextMenu>
+      <extendedTooltip name="ОстакиДенежныхСредствSearchControlExtendedTooltip" id="21">
+        <userVisible common="true"/>
+        <extInfo xsi:type="form:LabelDecorationExtInfo"/>
+      </extendedTooltip>
+    </searchControlAddition>
+    <rowPictureDataPath xsi:type="form:DataPath">
+      <segments>ОстакиДенежныхСредств</segments>
+      <segments>DefaultPicture</segments>
+    </rowPictureDataPath>
+    <extInfo xsi:type="form:DynamicListTableExtInfo" autoRefresh="true" autoRefreshPeriod="30"/>
+    <contextMenu name="ОстакиДенежныхСредствКонтекстноеМеню" id="2">
+      <userVisible common="true"/>
+    </contextMenu>
+    <extendedTooltip name="ОстакиДенежныхСредствРасширеннаяПодсказка" id="4">
+      <userVisible common="true"/>
+      <extInfo xsi:type="form:LabelDecorationExtInfo"/>
+    </extendedTooltip>
+  </items>
+  <autoCommandBar name="ФормаКоманднаяПанель" id="-1" autoFill="false">
+    <userVisible common="true"/>
+  </autoCommandBar>
+  <attributes name="Объект" id="1">
+    <valueType>
+      <types>DataProcessorObject.ОстатокДенежныхСредств</types>
+    </valueType>
+    <view common="true"/>
+    <edit common="true"/>
+  </attributes>
+  <attributes name="ОстакиДенежныхСредств" id="2">
+    <title key="ru" value="Остаки денежных средств"/>
+    <valueType>
+      <types>DynamicList</types>
+    </valueType>
+    <view common="true"/>
+    <edit common="true"/>
+    <extInfo xsi:type="form:DynamicListExtInfo" queryText="ВЫБРАТЬ&#xA;&#x9;ДвижениеПоСчетуДенежныхСредствОстатки.СчетДенежныхСредств,&#xA;&#x9;СУММА(ДвижениеПоСчетуДенежныхСредствОстатки.СуммаОстаток) КАК СуммаОстаток&#xA;ИЗ&#xA;&#x9;РегистрНакопления.ДвижениеПоСчетуДенежныхСредств.Остатки(, ) КАК ДвижениеПоСчетуДенежныхСредствОстатки&#xA;&#xA;СГРУППИРОВАТЬ ПО&#xA;&#x9;ДвижениеПоСчетуДенежныхСредствОстатки.СчетДенежныхСредств" mainTable="AccumulationRegister.ДвижениеПоСчетуДенежныхСредств.Balance" dynamicDataRead="false" customQuery="true" listSettings="DataProcessor.ОстатокДенежныхСредств.Form.Форма.Form.Attributes.ОстакиДенежныхСредств.ExtInfo.ListSettings"/>
+  </attributes>
+  <formCommands name="Обновить" id="1" action="Обновить">
+    <title key="ru" value="Обновить"/>
+    <toolTip key="ru" value="Обновить"/>
+    <use common="true"/>
+  </formCommands>
+  <commandInterface>
+    <navigationPanel/>
+    <commandBar/>
+  </commandInterface>
+</form:Form>

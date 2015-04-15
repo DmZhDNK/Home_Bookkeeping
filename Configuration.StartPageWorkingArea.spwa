@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spwa:StartPageWorkingArea xmlns:spwa="http://g5.1c.ru/v8/dt/spwa" workingAreaTemplate="TwoColumnsEqualWidth">
+  <columns>
+    <items form="DataProcessor.ТратыЗаТекущийМесяцДерево.Form.Форма" height="10">
+      <visibility common="true"/>
+    </items>
+  </columns>
+  <columns>
+    <items form="DataProcessor.ОстатокДенежныхСредств.Form.Форма" height="10">
+      <visibility common="true"/>
+    </items>
+    <items form="DataProcessor.СредниеТратыЗаДень.Form.Форма" height="10">
+      <visibility common="true"/>
+    </items>
+  </columns>
+</spwa:StartPageWorkingArea>

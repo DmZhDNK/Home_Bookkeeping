@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:form="http://g5.1c.ru/v8/dt/form">
+  <items xsi:type="form:FormField" name="Номер" id="1">
+    <userVisible common="true"/>
+    <dataPath xsi:type="form:DataPath">
+      <segments>Объект</segments>
+      <segments>Number</segments>
+    </dataPath>
+    <extInfo xsi:type="form:InputFieldExtInfo"/>
+    <contextMenu name="НомерКонтекстноеМеню" id="2">
+      <userVisible common="true"/>
+    </contextMenu>
+    <extendedTooltip name="НомерРасширеннаяПодсказка" id="3">
+      <userVisible common="true"/>
+      <extInfo xsi:type="form:LabelDecorationExtInfo"/>
+    </extendedTooltip>
+  </items>
+  <items xsi:type="form:FormField" name="Дата" id="4">
+    <userVisible common="true"/>
+    <dataPath xsi:type="form:DataPath">
+      <segments>Объект</segments>
+      <segments>Date</segments>
+    </dataPath>
+    <extInfo xsi:type="form:InputFieldExtInfo"/>
+    <contextMenu name="ДатаКонтекстноеМеню" id="5">
+      <userVisible common="true"/>
+    </contextMenu>
+    <extendedTooltip name="ДатаРасширеннаяПодсказка" id="6">
+      <userVisible common="true"/>
+      <extInfo xsi:type="form:LabelDecorationExtInfo"/>
+    </extendedTooltip>
+  </items>
+  <items xsi:type="form:FormField" name="КтоПринес" id="7">
+    <userVisible common="true"/>
+    <dataPath xsi:type="form:DataPath">
+      <segments>Объект</segments>
+      <segments>КтоПринес</segments>
+    </dataPath>
+    <extInfo xsi:type="form:InputFieldExtInfo"/>
+    <contextMenu name="КтоПринесКонтекстноеМеню" id="8">
+      <userVisible common="true"/>
+    </contextMenu>
+    <extendedTooltip name="КтоПринесРасширеннаяПодсказка" id="9">
+      <userVisible common="true"/>
+      <extInfo xsi:type="form:LabelDecorationExtInfo"/>
+    </extendedTooltip>
+  </items>
+  <items xsi:type="form:FormField" name="СчетДенежныхСредств" id="10">
+    <userVisible common="true"/>
+    <dataPath xsi:type="form:DataPath">
+      <segments>Объект</segments>
+      <segments>СчетДенежныхСредств</segments>
+    </dataPath>
+    <extInfo xsi:type="form:InputFieldExtInfo"/>
+    <contextMenu name="СчетДенежныхСредствКонтекстноеМеню" id="11">
+      <userVisible common="true"/>
+    </contextMenu>
+    <extendedTooltip name="СчетДенежныхСредствРасширеннаяПодсказка" id="12">
+      <userVisible common="true"/>
+      <extInfo xsi:type="form:LabelDecorationExtInfo"/>
+    </extendedTooltip>
+  </items>
+  <items xsi:type="form:Table" name="Деньги" id="13" representation="List" autoInsertNewRow="true" enableStartDrag="true" enableDrag="true" searchStringLocation="None" viewStatusLocation="None" searchControlLocation="None">
+    <userVisible common="true"/>
+    <dataPath xsi:type="form:DataPath">
+      <segments>Объект</segments>
+      <segments>Деньги</segments>
+    </dataPath>
+    <items xsi:type="form:FormField" name="ДеньгиНомерСтроки" id="17" type="LabelField">
+      <userVisible common="true"/>
+      <dataPath xsi:type="form:DataPath">
+        <segments>Объект</segments>
+        <segments>Деньги</segments>
+        <segments>LineNumber</segments>
+      </dataPath>
+      <extInfo xsi:type="form:LabelFieldExtInfo"/>
+      <contextMenu name="ДеньгиНомерСтрокиКонтекстноеМеню" id="18">
+        <userVisible common="true"/>
+      </contextMenu>
+      <extendedTooltip name="ДеньгиНомерСтрокиРасширеннаяПодсказка" id="19">
+        <userVisible common="true"/>
+        <extInfo xsi:type="form:LabelDecorationExtInfo"/>
+      </extendedTooltip>
+    </items>
+    <items xsi:type="form:FormField" name="ДеньгиСтатьяДохода" id="20">
+      <userVisible common="true"/>
+      <dataPath xsi:type="form:DataPath">
+        <segments>Объект</segments>
+        <segments>Деньги</segments>
+        <segments>СтатьяДохода</segments>
+      </dataPath>
+      <extInfo xsi:type="form:InputFieldExtInfo"/>
+      <contextMenu name="ДеньгиСтатьяДоходаКонтекстноеМеню" id="21">
+        <userVisible common="true"/>
+      </contextMenu>
+      <extendedTooltip name="ДеньгиСтатьяДоходаРасширеннаяПодсказка" id="22">
+        <userVisible common="true"/>
+        <extInfo xsi:type="form:LabelDecorationExtInfo"/>
+      </extendedTooltip>
+    </items>
+    <items xsi:type="form:FormField" name="ДеньгиСумма" id="23">
+      <userVisible common="true"/>
+      <dataPath xsi:type="form:DataPath">
+        <segments>Объект</segments>
+        <segments>Деньги</segments>
+        <segments>Сумма</segments>
+      </dataPath>
+      <extInfo xsi:type="form:InputFieldExtInfo"/>
+      <contextMenu name="ДеньгиСуммаКонтекстноеМеню" id="24">
+        <userVisible common="true"/>
+      </contextMenu>
+      <extendedTooltip name="ДеньгиСуммаРасширеннаяПодсказка" id="25">
+        <userVisible common="true"/>
+        <extInfo xsi:type="form:LabelDecorationExtInfo"/>
+      </extendedTooltip>
+    </items>
+    <autoCommandBar name="ДеньгиКоманднаяПанель" id="15">
+      <userVisible common="true"/>
+    </autoCommandBar>
+    <searchStringAddition name="ДеньгиSearchString" id="32" source="ДеньгиSearchString">
+      <userVisible common="true"/>
+      <extInfo xsi:type="form:SearchStringAdditionExtInfo"/>
+      <contextMenu name="ДеньгиSearchStringContextMenu" id="33">
+        <userVisible common="true"/>
+      </contextMenu>
+      <extendedTooltip name="ДеньгиSearchStringExtendedTooltip" id="34">
+        <userVisible common="true"/>
+        <extInfo xsi:type="form:LabelDecorationExtInfo"/>
+      </extendedTooltip>
+    </searchStringAddition>
+    <viewStatusAddition name="ДеньгиViewStatus" id="35" type="ViewStatusAddition" source="ДеньгиViewStatus">
+      <userVisible common="true"/>
+      <extInfo xsi:type="form:ViewStatusAdditionExtInfo"/>
+      <contextMenu name="ДеньгиViewStatusContextMenu" id="36">
+        <userVisible common="true"/>
+      </contextMenu>
+      <extendedTooltip name="ДеньгиViewStatusExtendedTooltip" id="37">
+        <userVisible common="true"/>
+        <extInfo xsi:type="form:LabelDecorationExtInfo"/>
+      </extendedTooltip>
+    </viewStatusAddition>
+    <searchControlAddition name="ДеньгиSearchControl" id="38" type="SearchControlAddition" source="ДеньгиSearchControl">
+      <userVisible common="true"/>
+      <extInfo xsi:type="form:SearchControlAdditionExtInfo"/>
+      <contextMenu name="ДеньгиSearchControlContextMenu" id="39">
+        <userVisible common="true"/>
+      </contextMenu>
+      <extendedTooltip name="ДеньгиSearchControlExtendedTooltip" id="40">
+        <userVisible common="true"/>
+        <extInfo xsi:type="form:LabelDecorationExtInfo"/>
+      </extendedTooltip>
+    </searchControlAddition>
+    <contextMenu name="ДеньгиКонтекстноеМеню" id="14">
+      <userVisible common="true"/>
+    </contextMenu>
+    <extendedTooltip name="ДеньгиРасширеннаяПодсказка" id="16">
+      <userVisible common="true"/>
+      <extInfo xsi:type="form:LabelDecorationExtInfo"/>
+    </extendedTooltip>
+  </items>
+  <autoCommandBar name="ФормаКоманднаяПанель" id="-1">
+    <items xsi:type="form:FormGroup" name="Перейти" id="26" type="Popup">
+      <items xsi:type="form:Button" name="ФормаРегистрНакопленияДвижениеПоСчетуДенежныхСредствОткрытьПоРегистратору" id="28" type="CommandBarButton" commandName="AccumulationRegister.ДвижениеПоСчетуДенежныхСредств.StandardCommand.OpenByRecorder">
+        <userVisible common="true"/>
+        <dataPath xsi:type="form:DataPath">
+          <segments>Объект</segments>
+          <segments>RegisterRecords</segments>
+          <segments>ПоступлениеДенежныхСредств</segments>
+          <segments>Filter</segments>
+          <segments>Recorder</segments>
+          <segments>Value</segments>
+        </dataPath>
+        <parameter/>
+        <extendedTooltip name="ФормаРегистрНакопленияДвижениеПоСчетуДенежныхСредствОткрытьПоРегистраторуРасширеннаяПодсказка" id="29">
+          <userVisible common="true"/>
+          <extInfo xsi:type="form:LabelDecorationExtInfo"/>
+        </extendedTooltip>
+      </items>
+      <items xsi:type="form:Button" name="ФормаРегистрНакопленияПоступлениеДенежныхСредствОткрытьПоРегистратору" id="30" type="CommandBarButton" commandName="AccumulationRegister.ПоступлениеДенежныхСредств.StandardCommand.OpenByRecorder">
+        <userVisible common="true"/>
+        <dataPath xsi:type="form:DataPath">
+          <segments>Объект</segments>
+          <segments>RegisterRecords</segments>
+          <segments>ПоступлениеДенежныхСредств</segments>
+          <segments>Filter</segments>
+          <segments>Recorder</segments>
+          <segments>Value</segments>
+        </dataPath>
+        <parameter/>
+        <extendedTooltip name="ФормаРегистрНакопленияПоступлениеДенежныхСредствОткрытьПоРегистраторуРасширеннаяПодсказка" id="31">
+          <userVisible common="true"/>
+          <extInfo xsi:type="form:LabelDecorationExtInfo"/>
+        </extendedTooltip>
+      </items>
+      <userVisible common="true"/>
+      <title key="ru" value="Перейти"/>
+      <toolTip key="ru" value="Перейти"/>
+      <extendedTooltip name="ПерейтиРасширеннаяПодсказка" id="27">
+        <userVisible common="true"/>
+        <extInfo xsi:type="form:LabelDecorationExtInfo"/>
+      </extendedTooltip>
+      <extInfo xsi:type="form:PopupGroupExtInfo"/>
+    </items>
+    <userVisible common="true"/>
+  </autoCommandBar>
+  <attributes name="Объект" id="1" main="true" savedData="true">
+    <valueType>
+      <types>DocumentObject.ПриходДенежныхСредств</types>
+    </valueType>
+    <view common="true"/>
+    <edit common="true"/>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>Объект</segments>
+      <segments>RegisterRecords</segments>
+    </notDefaultUseAlwaysAttributes>
+  </attributes>
+  <commandInterface>
+    <navigationPanel/>
+    <commandBar/>
+  </commandInterface>
+  <extInfo xsi:type="form:DocumentFormExtInfo"/>
+</form:Form>
