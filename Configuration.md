@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<mdclass:Configuration xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ebb994c2-2aa5-47c9-8811-465fd3b5c44e" name="Конфигурация" defaultRunMode="ManagedApplication" scriptVariant="Russian" useManagedFormInOrdinaryApplication="true" useOrdinaryFormInManagedApplication="true" defaultLanguage="Language.Русский" dataLockControlMode="Managed" objectAutonumerationMode="NotAutoFree" modalityUseMode="DontUse" compatibilityMode="Version8_3_3">
+<?xml version="1.0" encoding="UTF-8"?><mdclass:Configuration xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ebb994c2-2aa5-47c9-8811-465fd3b5c44e" name="Конфигурация" defaultRunMode="ManagedApplication" scriptVariant="Russian" useManagedFormInOrdinaryApplication="true" useOrdinaryFormInManagedApplication="true" defaultLanguage="Language.Русский" dataLockControlMode="Managed" objectAutonumerationMode="NotAutoFree" modalityUseMode="DontUse" compatibilityMode="Version8_3_3">
     <usePurposes>PersonalComputer</usePurposes>
     <subsystems>Subsystem.Документы</subsystems>
     <subsystems>Subsystem.Справочники</subsystems>

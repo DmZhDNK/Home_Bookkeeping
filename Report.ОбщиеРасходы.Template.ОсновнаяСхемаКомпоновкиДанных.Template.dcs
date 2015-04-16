@@ -1,205 +1,221 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<dataSource>
-		<name>ИсточникДанных1</name>
-		<dataSourceType>Local</dataSourceType>
-	</dataSource>
-	<dataSet xsi:type="DataSetQuery">
-		<name>НаборДанных1</name>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>СтатьяРасходов</dataPath>
-			<field>СтатьяРасходов</field>
-			<role>
-				<dcscom:dimension>true</dcscom:dimension>
-			</role>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>СуммаОборот</dataPath>
-			<field>СуммаОборот</field>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>ФизическоеЛицо</dataPath>
-			<field>ФизическоеЛицо</field>
-		</field>
-		<dataSource>ИсточникДанных1</dataSource>
-		<query>ВЫБРАТЬ
+    <dataSource>
+        <name>ИсточникДанных1</name>
+        <dataSourceType>Local</dataSourceType>
+    </dataSource>
+    <dataSet xsi:type="DataSetQuery">
+        <name>НаборДанных1</name>
+        <field xsi:type="DataSetFieldField">
+            <dataPath>СтатьяРасходов</dataPath>
+            <field>СтатьяРасходов</field>
+            <role>
+                <dcscom:dimension>true</dcscom:dimension>
+            </role>
+        </field>
+        <field xsi:type="DataSetFieldField">
+            <dataPath>СуммаОборот</dataPath>
+            <field>СуммаОборот</field>
+        </field>
+        <field xsi:type="DataSetFieldField">
+            <dataPath>ФизическоеЛицо</dataPath>
+            <field>ФизическоеЛицо</field>
+        </field>
+        <dataSource>ИсточникДанных1</dataSource>
+        <query>ВЫБРАТЬ
 	РасходДенежныхСредствОбороты.СтатьяРасходов,
 	РасходДенежныхСредствОбороты.СуммаОборот
 ИЗ
-	РегистрНакопления.РасходДенежныхСредств.Обороты(&amp;НачалоПериода, &amp;КонецПериода, , ) КАК РасходДенежныхСредствОбороты</query>
-	</dataSet>
-	<totalField>
-		<dataPath>СуммаОборот</dataPath>
-		<expression>Сумма(СуммаОборот)</expression>
-	</totalField>
-	<parameter>
-		<name>НачалоПериода</name>
-		<title xsi:type="v8:LocalStringType">
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>Начало периода</v8:content>
-			</v8:item>
-		</title>
-		<valueType>
-			<v8:Type>xs:dateTime</v8:Type>
-			<v8:DateQualifiers>
-				<v8:DateFractions>Date</v8:DateFractions>
-			</v8:DateQualifiers>
-		</valueType>
-		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
-		<useRestriction>false</useRestriction>
-	</parameter>
-	<parameter>
-		<name>КонецПериода</name>
-		<title xsi:type="v8:LocalStringType">
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>Конец периода</v8:content>
-			</v8:item>
-		</title>
-		<valueType>
-			<v8:Type>xs:dateTime</v8:Type>
-			<v8:DateQualifiers>
-				<v8:DateFractions>Date</v8:DateFractions>
-			</v8:DateQualifiers>
-		</valueType>
-		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
-		<useRestriction>false</useRestriction>
-		<expression>КонецПериода(&amp;КонецПериода,"День")</expression>
-	</parameter>
-	<settingsVariant>
-		<dcsset:name>Основной</dcsset:name>
-		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
-		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
-			<dcsset:selection>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>СтатьяРасходов</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>СуммаОборот</dcsset:field>
-				</dcsset:item>
-			</dcsset:selection>
-			<dcsset:dataParameters>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
-					<dcscor:parameter>НачалоПериода</dcscor:parameter>
-					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
-					<dcsset:userSettingID>4fdbf4f9-ddf8-44b3-b007-89991e48ebbb</dcsset:userSettingID>
-				</dcscor:item>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
-					<dcscor:parameter>КонецПериода</dcscor:parameter>
-					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
-					<dcsset:userSettingID>843a64fc-807c-44d8-b388-9cd982209208</dcsset:userSettingID>
-				</dcscor:item>
-			</dcsset:dataParameters>
-			<dcsset:order>
-				<dcsset:item xsi:type="dcsset:OrderItemField">
-					<dcsset:field>СтатьяРасходов.Наименование</dcsset:field>
-					<dcsset:orderType>Asc</dcsset:orderType>
-				</dcsset:item>
-			</dcsset:order>
-			<dcsset:item xsi:type="dcsset:StructureItemGroup">
-				<dcsset:groupItems>
-					<dcsset:item xsi:type="dcsset:GroupItemField">
-						<dcsset:field>СтатьяРасходов</dcsset:field>
-						<dcsset:groupType>Hierarchy</dcsset:groupType>
-						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
-						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
-						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
-					</dcsset:item>
-				</dcsset:groupItems>
-				<dcsset:order>
-					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
-				</dcsset:order>
-				<dcsset:selection>
-					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
-				</dcsset:selection>
-			</dcsset:item>
-		</dcsset:settings>
-	</settingsVariant>
-	<settingsVariant>
-		<dcsset:name>Диаграмма</dcsset:name>
-		<dcsset:presentation xsi:type="v8:LocalStringType">
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>Диаграмма</v8:content>
-			</v8:item>
-		</dcsset:presentation>
-		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
-			<dcsset:selection>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>СтатьяРасходов</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>СуммаОборот</dcsset:field>
-				</dcsset:item>
-			</dcsset:selection>
-			<dcsset:dataParameters>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
-					<dcscor:parameter>НачалоПериода</dcscor:parameter>
-					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
-					<dcsset:userSettingID>b228b27c-483e-424b-ad70-9b9f7ea99e22</dcsset:userSettingID>
-				</dcscor:item>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
-					<dcscor:parameter>КонецПериода</dcscor:parameter>
-					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
-					<dcsset:userSettingID>8fcf857d-d901-474a-851d-b5ace05c0ddd</dcsset:userSettingID>
-				</dcscor:item>
-			</dcsset:dataParameters>
-			<dcsset:order>
-				<dcsset:item xsi:type="dcsset:OrderItemField">
-					<dcsset:field>СтатьяРасходов.Наименование</dcsset:field>
-					<dcsset:orderType>Asc</dcsset:orderType>
-				</dcsset:item>
-			</dcsset:order>
-			<dcsset:outputParameters>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:parameter>ChartType</dcscor:parameter>
-					<dcscor:value xsi:type="v8ui:ChartType">Column3D</dcscor:value>
-				</dcscor:item>
-			</dcsset:outputParameters>
-			<dcsset:item xsi:type="dcsset:StructureItemGroup">
-				<dcsset:groupItems>
-					<dcsset:item xsi:type="dcsset:GroupItemField">
-						<dcsset:field>СуммаОборот</dcsset:field>
-						<dcsset:groupType>Items</dcsset:groupType>
-						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
-						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
-						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
-					</dcsset:item>
-				</dcsset:groupItems>
-				<dcsset:order>
-					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
-				</dcsset:order>
-				<dcsset:selection>
-					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
-				</dcsset:selection>
-				<dcsset:item xsi:type="dcsset:StructureItemChart">
-					<dcsset:series>
-						<dcsset:groupItems>
-							<dcsset:item xsi:type="dcsset:GroupItemField">
-								<dcsset:field>СтатьяРасходов</dcsset:field>
-								<dcsset:groupType>HierarchyOnly</dcsset:groupType>
-								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
-								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
-								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
-							</dcsset:item>
-						</dcsset:groupItems>
-						<dcsset:order>
-							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
-						</dcsset:order>
-						<dcsset:selection>
-							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
-						</dcsset:selection>
-					</dcsset:series>
-					<dcsset:selection>
-						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
-					</dcsset:selection>
-				</dcsset:item>
-			</dcsset:item>
-		</dcsset:settings>
-	</settingsVariant>
+	РегистрНакопления.РасходДенежныхСредств.Обороты( ) КАК РасходДенежныхСредствОбороты</query>
+    </dataSet>
+    <totalField>
+        <dataPath>СуммаОборот</dataPath>
+        <expression>Сумма(СуммаОборот)</expression>
+    </totalField>
+    <parameter>
+        <name>НачалоПериода</name>
+        <title xsi:type="v8:LocalStringType">
+            <v8:item>
+                <v8:lang>ru</v8:lang>
+                <v8:content>Начало периода</v8:content>
+            </v8:item>
+        </title>
+        <valueType>
+            <v8:Type>xs:dateTime</v8:Type>
+            <v8:DateQualifiers>
+                <v8:DateFractions>Date</v8:DateFractions>
+            </v8:DateQualifiers>
+        </valueType>
+        <value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+        <useRestriction>false</useRestriction>
+        <expression>НачалоПериода(&amp;НачалоПериода,"День")</expression>
+        <valueListAllowed>false</valueListAllowed>
+        <availableAsField>true</availableAsField>
+        <denyIncompleteValues>false</denyIncompleteValues>
+        <use>Auto</use>
+    </parameter>
+    <parameter>
+        <name>КонецПериода</name>
+        <title xsi:type="v8:LocalStringType">
+            <v8:item>
+                <v8:lang>ru</v8:lang>
+                <v8:content>Конец периода</v8:content>
+            </v8:item>
+        </title>
+        <valueType>
+            <v8:Type>xs:dateTime</v8:Type>
+            <v8:DateQualifiers>
+                <v8:DateFractions>Date</v8:DateFractions>
+            </v8:DateQualifiers>
+        </valueType>
+        <value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+        <useRestriction>false</useRestriction>
+        <expression>КонецПериода(&amp;КонецПериода,"День")</expression>
+        <valueListAllowed>false</valueListAllowed>
+        <availableAsField>true</availableAsField>
+        <denyIncompleteValues>false</denyIncompleteValues>
+        <use>Auto</use>
+    </parameter>
+    <settingsVariant>
+        <dcsset:name>Основной</dcsset:name>
+        <dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+        <dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+            <dcsset:selection>
+                <dcsset:item xsi:type="dcsset:SelectedItemField">
+                    <dcsset:field>СтатьяРасходов</dcsset:field>
+                </dcsset:item>
+                <dcsset:item xsi:type="dcsset:SelectedItemField">
+                    <dcsset:field>СуммаОборот</dcsset:field>
+                </dcsset:item>
+            </dcsset:selection>
+            <dcsset:dataParameters>
+                <dcscor:item xsi:type="dcsset:SettingsParameterValue">
+                    <dcscor:use>false</dcscor:use>
+                    <dcscor:parameter>НачалоПериода</dcscor:parameter>
+                    <dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+                    <dcsset:userSettingID>4fdbf4f9-ddf8-44b3-b007-89991e48ebbb</dcsset:userSettingID>
+                </dcscor:item>
+                <dcscor:item xsi:type="dcsset:SettingsParameterValue">
+                    <dcscor:use>false</dcscor:use>
+                    <dcscor:parameter>КонецПериода</dcscor:parameter>
+                    <dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+                    <dcsset:userSettingID>843a64fc-807c-44d8-b388-9cd982209208</dcsset:userSettingID>
+                </dcscor:item>
+            </dcsset:dataParameters>
+            <dcsset:order>
+                <dcsset:item xsi:type="dcsset:OrderItemField">
+                    <dcsset:field>СтатьяРасходов.Наименование</dcsset:field>
+                    <dcsset:orderType>Asc</dcsset:orderType>
+                </dcsset:item>
+            </dcsset:order>
+            <dcsset:item xsi:type="dcsset:StructureItemGroup">
+                <dcsset:groupItems>
+                    <dcsset:item xsi:type="dcsset:GroupItemField">
+                        <dcsset:field>СтатьяРасходов</dcsset:field>
+                        <dcsset:groupType>Hierarchy</dcsset:groupType>
+                        <dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+                        <dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+                        <dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+                    </dcsset:item>
+                </dcsset:groupItems>
+                <dcsset:order>
+                    <dcsset:item xsi:type="dcsset:OrderItemAuto">
+                    </dcsset:item>
+                </dcsset:order>
+                <dcsset:selection>
+                    <dcsset:item xsi:type="dcsset:SelectedItemAuto">
+                    </dcsset:item>
+                </dcsset:selection>
+            </dcsset:item>
+        </dcsset:settings>
+    </settingsVariant>
+    <settingsVariant>
+        <dcsset:name>Диаграмма</dcsset:name>
+        <dcsset:presentation xsi:type="v8:LocalStringType">
+            <v8:item>
+                <v8:lang>ru</v8:lang>
+                <v8:content>Диаграмма</v8:content>
+            </v8:item>
+        </dcsset:presentation>
+        <dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+            <dcsset:selection>
+                <dcsset:item xsi:type="dcsset:SelectedItemField">
+                    <dcsset:field>СтатьяРасходов</dcsset:field>
+                </dcsset:item>
+                <dcsset:item xsi:type="dcsset:SelectedItemField">
+                    <dcsset:field>СуммаОборот</dcsset:field>
+                </dcsset:item>
+            </dcsset:selection>
+            <dcsset:dataParameters>
+                <dcscor:item xsi:type="dcsset:SettingsParameterValue">
+                    <dcscor:use>false</dcscor:use>
+                    <dcscor:parameter>НачалоПериода</dcscor:parameter>
+                    <dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+                    <dcsset:userSettingID>b228b27c-483e-424b-ad70-9b9f7ea99e22</dcsset:userSettingID>
+                </dcscor:item>
+                <dcscor:item xsi:type="dcsset:SettingsParameterValue">
+                    <dcscor:use>false</dcscor:use>
+                    <dcscor:parameter>КонецПериода</dcscor:parameter>
+                    <dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+                    <dcsset:userSettingID>8fcf857d-d901-474a-851d-b5ace05c0ddd</dcsset:userSettingID>
+                </dcscor:item>
+            </dcsset:dataParameters>
+            <dcsset:order>
+                <dcsset:item xsi:type="dcsset:OrderItemField">
+                    <dcsset:field>СтатьяРасходов.Наименование</dcsset:field>
+                    <dcsset:orderType>Asc</dcsset:orderType>
+                </dcsset:item>
+            </dcsset:order>
+            <dcsset:outputParameters>
+                <dcscor:item xsi:type="dcsset:SettingsParameterValue">
+                    <dcscor:parameter>ChartType</dcscor:parameter>
+                    <dcscor:value xsi:type="v8ui:ChartType">Column3D</dcscor:value>
+                </dcscor:item>
+            </dcsset:outputParameters>
+            <dcsset:item xsi:type="dcsset:StructureItemGroup">
+                <dcsset:groupItems>
+                    <dcsset:item xsi:type="dcsset:GroupItemField">
+                        <dcsset:field>СуммаОборот</dcsset:field>
+                        <dcsset:groupType>Items</dcsset:groupType>
+                        <dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+                        <dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+                        <dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+                    </dcsset:item>
+                </dcsset:groupItems>
+                <dcsset:order>
+                    <dcsset:item xsi:type="dcsset:OrderItemAuto">
+                    </dcsset:item>
+                </dcsset:order>
+                <dcsset:selection>
+                    <dcsset:item xsi:type="dcsset:SelectedItemAuto">
+                    </dcsset:item>
+                </dcsset:selection>
+                <dcsset:item xsi:type="dcsset:StructureItemChart">
+                    <dcsset:series>
+                        <dcsset:groupItems>
+                            <dcsset:item xsi:type="dcsset:GroupItemField">
+                                <dcsset:field>СтатьяРасходов</dcsset:field>
+                                <dcsset:groupType>HierarchyOnly</dcsset:groupType>
+                                <dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+                                <dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+                                <dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+                            </dcsset:item>
+                        </dcsset:groupItems>
+                        <dcsset:order>
+                            <dcsset:item xsi:type="dcsset:OrderItemAuto">
+                            </dcsset:item>
+                        </dcsset:order>
+                        <dcsset:selection>
+                            <dcsset:item xsi:type="dcsset:SelectedItemAuto">
+                            </dcsset:item>
+                        </dcsset:selection>
+                    </dcsset:series>
+                    <dcsset:selection>
+                        <dcsset:item xsi:type="dcsset:SelectedItemAuto">
+                        </dcsset:item>
+                    </dcsset:selection>
+                </dcsset:item>
+            </dcsset:item>
+        </dcsset:settings>
+    </settingsVariant>
 </DataCompositionSchema>
